@@ -1,6 +1,4 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-
 function Answers(props) {
   return (
    
@@ -12,7 +10,7 @@ function Answers(props) {
         name="buttonGroup"
         
         id={props.answerType}
-        value={props.answerType}
+        value={props.answerContent}
         disabled={props.answer}
         onClick={props.onAnswerSelected}
       />
@@ -21,12 +19,5 @@ function Answers(props) {
     
   );
 }
-
-// Answers.propTypes = {
-//   answerType: PropTypes.string.isRequired,
-  
-//   answer: PropTypes.string.isRequired,
-//   onAnswerSelected: PropTypes.func.isRequired
-// };
 
 export default Answers;
