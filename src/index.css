@@ -74,7 +74,7 @@ body {
 }
 
  .CustomButton {
-  background-color:#f4f7fa;
+  /* background-color:#f4f7fa; */
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: #888;
@@ -82,8 +82,18 @@ body {
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
+  border: 1px solid #bbb;
+  text-align: center;
+  width: 400px !important;
 } 
 
+.optiondiv
+{
+	    text-align: center;
+      border: 1px solid #bbb;
+      padding: 11px 6px;
+      margin-top: 15px;
+}
 .CustomButton,
 .radioCustomLabel {
   display: inline-block;
@@ -185,3 +195,14 @@ body {
 	box-shadow : none;
 	margin-bottom : 0px;
 } */ 
+
+.btn-disable
+        {
+        cursor: not-allowed;
+        pointer-events: none;
+
+        /*Button disabled - CSS color class*/
+        color: #c0c0c0;
+        background-color: #ffffff;
+
+        }

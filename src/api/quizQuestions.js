@@ -3,20 +3,20 @@ var quizQuestions = [
         question: "Which two forms of energy does the Earth receive directly from the Sun?",
         answers: [
             {
-                type: "text",
+                id: "1",
                 content: "A. Light and sound"
             },
             {
-                type: "text",
+                id: "2",
                 content: "B.Light and thermal"
             },
             {
-                type: "text",
+                id: "3",
                 content: "C. Electrical and light"
             },
 
             {
-                type: "text",
+                id: "4",
                 content: "D. Mechanical and thermal"
             }
         ],
@@ -26,19 +26,19 @@ var quizQuestions = [
         question: "Which of the following uses electrical energy to produce light and sound?",
         answers: [
             {
-                type: "text",
+                id: "5",
                 content: "A. Lamp"
             },
             {
-                type: "text",
+                id: "6",
                 content: "B. Candle"
             },
             {
-                type: "text",
+                id: "7",
                 content: "C. Flashlight"
             },
             {
-                type: "text",
+                id: "8",
                 content: "D. Television"
             }
         ],
@@ -48,20 +48,20 @@ var quizQuestions = [
         question: "Students in a science class were lighting bulbs by attaching them to batteries with wires. What form of energy were they exploring?",
         answers: [
             {
-                type: "text",
+                id: "9",
                 content: "A.Mechanical"
             },
             {
-                type: "text",
+                id: "10",
                 content: "B. Electrical"
             },
             {
-                type: "text",
+                id: "11",
                 content: "C. Thermal"
             },
 
             {
-                type: "text",
+                id: "12",
                 content: "D. Sound"
             }
         ],
@@ -72,20 +72,20 @@ var quizQuestions = [
         question: "Which form of energy is transmitted by vibrations in the air?",
         answers: [
             {
-                type: "text",
+                id: "13",
                 content: "A. Electrical"
             },
             {
-                type:"text",
+                id: "14",
                 content: "B. Thermal"
             },
             {
-                type: "text",
+                id: "15",
                 content: "C. Sound"
             },
 
             {
-                type: "text",
+                id: "16",
                 content: "D.Heat"
             }
         ],

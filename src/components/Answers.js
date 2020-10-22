@@ -3,19 +3,19 @@ function Answers(props) {
   return (
    
 							 
-    <li className="answers">
+    <div className="col-md-6 col-sm-12 col-xs-12">
       <input
         type="button"
         className="CustomButton"
         name="buttonGroup"
         
-        id={props.answerType}
+        id={props.answerid }
         value={props.answerContent}
         disabled={props.answer}
         onClick={props.onAnswerSelected}
       />
       
-    </li>
+      </div>
     
   );
 }

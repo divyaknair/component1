@@ -12,7 +12,7 @@ export class App extends Component {
     this.state = {
       counter: 0,
       questionId: 1,
-      question: '',
+      //question:[] ,
       answerOptions: [],
       answer: '',
       answersCount: {},
@@ -23,9 +23,12 @@ export class App extends Component {
    
   componentDidMount() {
     const AnswerOptionsList = quizQuestions.map((question) => question.answers);  
-  
+    //const QuestionList=quizQuestions.map((quizQuestion)=>quizQuestion.question);
+    
+   // console.log("correctAnsList",correctAnsList)
+    console.log("AnswerOptionsList",AnswerOptionsList)
     this.setState({
-      question: quizQuestions[0].question,
+      //question: QuestionList[0],
       answerOptions: AnswerOptionsList[0],
       correctAns:quizQuestions[0].correctAns
     });
@@ -38,7 +41,7 @@ export class App extends Component {
     this.setState({
       counter: counter,
       questionId: questionId,
-      question: quizQuestions[counter].question,
+      //question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
       correctAns:quizQuestions[counter].correctAns,
       answer: ''
@@ -47,20 +50,29 @@ export class App extends Component {
 
  
   handleAnswerSelected(event) {
-    
-    console.log("event.currentTarget.value",event.currentTarget.value)
-    console.log("corerct ans",this.correctAns)
-    if (this.state.questionId < quizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 300);
-    } else {
-      console.log("quiz finished")
-    }
-
+    const correctAnsList = quizQuestions.map((question) => question.correctAns);
+    console.log("event.currentTarget.id",event.currentTarget.getAttribute("id"))
+    //console.log("event.currentTarget.name",event.currentTarget.getAttribute("name"))
+    //console.log("corerct ans",correctAnsList[0])
+    // if (this.state.questionId < quizQuestions.length) {
+    //   setTimeout(() => this.setNextQuestion(), 300);
+    // } else {
+    //   console.log("quiz finished")
+    // }
+   
+     const id=event.currentTarget.getAttribute("id")
+     //const num=event.currentTarget.getAttribute("name")
+     const i=(id-1)/4
+     const j=Math.floor(i);
+     
+     console.log("correct answer",correctAnsList[j])
       //if(event.currentTarget.value==="B. Light and thermal")
-      if(event.currentTarget.value=== this.correctAns)
+     
+      if(event.currentTarget.value=== correctAnsList[j])
       {
           console.log("correct answer")
           event.currentTarget.className ="CustomButton  correctans"
+
       }
       else
       {
@@ -78,13 +90,13 @@ export class App extends Component {
 
       <Choice
         answer={this.state.answer}
-        answerOptions={this.state.answerOptions}
+        // answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
-        question={this.state.question}
+        question={quizQuestions}
        
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
-        correctAns={this.state.correctAns}
+        
       />
     
       </div>

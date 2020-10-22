@@ -1,9 +1,9 @@
 import React from 'react';
 function QuestionCount(props) {
   return (
-    <div className="questionCount">
-      Question <span>{props.counter}</span>
-    </div>
+    
+     <h6>Question <span>{props.counter}</span></h6>
+   
   );
 }
 
