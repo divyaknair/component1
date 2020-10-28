@@ -2,7 +2,7 @@ import React from 'react';
 function QuestionCount(props) {
   return (
     
-     <h6>Question <span>{props.counter}</span></h6>
+     <h5>Question <span>{props.counter}</span></h5>
    
   );
 }

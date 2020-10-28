@@ -69,12 +69,12 @@ body {
   border-top: 1px solid #eee;
 }
 
-.answerOption:hover {
+/* .CustomButton:hover {
   background-color: #eefbfe;
-}
+} */
 
  .CustomButton {
-  /* background-color:#f4f7fa; */
+   /* background-color:#f4f7fa;  */
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   color: #888;
@@ -85,6 +85,8 @@ body {
   border: 1px solid #bbb;
   text-align: center;
   width: 400px !important;
+  background: none;
+          box-shadow: none; 
 } 
 
 .optiondiv
@@ -94,12 +96,12 @@ body {
       padding: 11px 6px;
       margin-top: 15px;
 }
-.CustomButton,
+/* .CustomButton,
 .radioCustomLabel {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-}
+} */
 
 .radioCustomLabel {
   position: relative;
@@ -110,7 +112,7 @@ body {
   line-height: 1.5;
 }
 
-.CustomButton ~ .radioCustomLabel:before {
+/* .CustomButton ~ .radioCustomLabel:before {
   position: absolute;
   top: 20px;
   left: 38px;
@@ -123,7 +125,7 @@ body {
   border: 1px solid #bbb;
   border-radius: 50%;
   transition: all 0.3s;
-}
+} */
 
 .radioCustomButton:checked ~ .radioCustomLabel:before {
   content: '';
@@ -206,3 +208,22 @@ body {
         background-color: #ffffff;
 
         }
+
+        /* .btn {
+          display: inline-block;
+          font-weight: 400;
+          color: #212529;
+          text-align: center;
+          vertical-align: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          background-color: transparent;
+          border: 1px solid transparent;
+          padding: .375rem .75rem;
+          font-size: 1rem;
+          line-height: 1.5;
+          border-radius: .25rem;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      } */

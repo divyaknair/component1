@@ -5,9 +5,9 @@ import Answers from './Answers'
 
 function Choice(props) {
 
-   
 
-   const QuestionList = props.question.map((quizQuestion) => quizQuestion.question);
+
+    const QuestionList = props.question.map((quizQuestion) => quizQuestion.question);
     const AnswerOptionsList = props.question.map((question) => question.answers);
     var zipped = [];
     for (var i = 0; i < QuestionList.length; i++) {
@@ -17,54 +17,45 @@ function Choice(props) {
     //const zipped = (QuestionList, AnswerOptionsList);
     console.log("AnswerOptionsList", AnswerOptionsList)
 
-    function renderAnswerOptions(key,id) {
-        
-               
+    function renderAnswerOptions(key) {
+
+
         return (
             <div className="col-md-6 col-sm-12 col-xs-12">
                 <Answers
-                    key={id}
                     answerContent={key.content}
                     answerid={key.id}
-                    answer={props.answer}
-                    questionId={props.questionId}
                     onAnswerSelected={props.onAnswerSelected}
+                    disable={props.disable}
 
                 />
-           </div>
+            </div>
         );
     }
     return (
 
         <div >
-            
+
             {
                 zipped.map(([question, Answers], j) => (
 
-                    <div className="lessoncard">
-                         <div >
+                    <div className="card lessoncard">
+                        <div className="card-header" >
                             <QuestionCount
-                                counter={1+j}
-                                total={props.questionTotal}/>
-                         </div>
-                     <div className="card-block">
-					       <div className="popuptxt">
-                              <Question content={question} />
+                                counter={1 + j}
+                            />
+                        </div>
+                        <div className="card-block">
+                            <div className="popuptxt">
+                                <Question content={question} />
 
+                                <div className="row">
 
-
-                        
-                            
-                              <div className="row">
-                                 
-                                     {Answers.map(renderAnswerOptions,j)}
+                                    {Answers.map(renderAnswerOptions)}
                                 </div>
-                             </div>
                             </div>
+                        </div>
                     </div>
-                       
-
-                   
                 ))
             }
 

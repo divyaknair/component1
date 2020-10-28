@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useRef} from 'react';
 function Answers(props) {
+  
   return (
    
 							 
@@ -7,12 +8,13 @@ function Answers(props) {
       <input
         type="button"
         className="CustomButton"
-        name="buttonGroup"
+        name={"buttonGroup" +  (Math.floor((props.answerid-1)/4)+1)}
         
         id={props.answerid }
         value={props.answerContent}
-        disabled={props.answer}
+        disabled={props.disable}
         onClick={props.onAnswerSelected}
+       
       />
       
       </div>
